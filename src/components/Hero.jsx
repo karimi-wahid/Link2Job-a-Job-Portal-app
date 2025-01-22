@@ -14,6 +14,7 @@ const Hero = () => {
       location: locationRef.current.value,
     });
     setIsSearched(true);
+    scrollTo(450,450)
   };
 
   return (
