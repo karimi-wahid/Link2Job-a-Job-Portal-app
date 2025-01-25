@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import RecruitarLogin from './components/RecruitarLogin'
+import AppContext from './context/AppContext'
+import { Outlet } from 'react-router-dom'
 
 const App = () => {
+  const {showRecruiterLogin} = useContext(AppContext)
   return (
-    <div>App</div>
+    <div>
+      {showRecruiterLogin && <RecruitarLogin />}
+      <Outlet />
+      
+    </div>
   )
 }
 

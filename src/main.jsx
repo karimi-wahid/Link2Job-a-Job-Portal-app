@@ -11,17 +11,23 @@ import { ClerkProvider } from '@clerk/clerk-react'
 
 const router = createBrowserRouter([
   {
-    path: '/',
-    element: <Home />
-  },
-  {
-    path: '/apply-job/:id',
-    element: <ApplyJobs />
-  },
-  {
-    path: '/applications',
-    element: <Applications />
+    element: <App />,
+    children: [
+      {
+        path: '/',
+        element: <Home />
+      },
+      {
+        path: '/apply-job/:id',
+        element: <ApplyJobs />
+      },
+      {
+        path: '/applications',
+        element: <Applications />
+      }
+    ]
   }
+  
 ])
 
 
