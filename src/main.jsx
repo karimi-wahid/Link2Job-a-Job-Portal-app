@@ -7,6 +7,10 @@ import ApplyJobs from './pages/ApplyJobs.jsx'
 import Applications from './pages/Applications.jsx'
 import { AppContextProvider } from './context/AppContext.jsx'
 import { ClerkProvider } from '@clerk/clerk-react'
+import Dashboard from './pages/Dashboard.jsx'
+import AddJob from './pages/AddJob.jsx'
+import ManageJobs from './pages/ManageJobs.jsx'
+import ViewApplications from './pages/ViewApplications.jsx'
 
 
 const router = createBrowserRouter([
@@ -24,7 +28,26 @@ const router = createBrowserRouter([
       {
         path: '/applications',
         element: <Applications />
-      }
+      },
+      {
+        path: '/dashboard',
+        element: <Dashboard />,
+        children:[
+          {
+            path: 'add-jobs',
+            element: <AddJob />
+          },
+          {
+            path: 'manage-jobs',
+            element: <ManageJobs />
+          },
+          {
+            path: 'view-applications',
+            element: <ViewApplications />
+          }
+        ]
+      },
+      
     ]
   }
   
