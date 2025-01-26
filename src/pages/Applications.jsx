@@ -3,6 +3,8 @@ import Navbar from "../components/Navbar";
 import { assets, jobsApplied } from "../assets/assets";
 import moment from "moment";
 import Footer from "../components/Footer";
+import cv from '../assets/karimi-cv.pdf'
+
 
 const Applications = () => {
   const [isEdit, setIsEdit] = useState(false);
@@ -41,7 +43,8 @@ const Applications = () => {
             <div className="flex gap-2">
               <a
                 className="bg-blue-100 text-blue-600 px-4 py-2 rounded-lg"
-                href="">
+                href=""
+                download={cv}>
                 Resume
               </a>
               <button

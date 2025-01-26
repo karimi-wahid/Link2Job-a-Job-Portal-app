@@ -26,7 +26,7 @@ const AddJob = () => {
         theme: "snow",
       });
     }
-  },[]);
+  }, []);
 
   return (
     <form className="container p-4 flex flex-col w-full items-start gap-3">
@@ -101,7 +101,9 @@ const AddJob = () => {
         />
       </div>
 
-      <button className="w-28 py-3 mt-4 bg-green-600 hover:bg-green-700 text-white rounded">Add</button>
+      <button className="w-28 py-3 mt-4 bg-green-600 hover:bg-green-700 text-white rounded">
+        Add
+      </button>
     </form>
   );
 };
